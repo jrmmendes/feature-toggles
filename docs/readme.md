@@ -20,7 +20,7 @@ export interface FeatureFlag {
   countries?: Country[];
 }
 ```
-> You can find the enums, nested types and field descriptions on [interfaces.ts](src/interfaces.ts) file.
+> You can find the enums, nested types and field descriptions on [interfaces.ts](../src/interfaces.ts) file.
 
 Then, you must create a `DecisionService` instance and use the `isEnabled` method. 
 This method receives two parameters:
@@ -38,4 +38,11 @@ const service = new DecisionService(flags);
 
 const isFeatureFlagEnabled = service.isEnabled('FEATURE_TOGGLE_NAME', context);
 ```
-> You can also find the context interface on the [interfaces.ts](src/interfaces.ts) file.
+> You can also find the context interface on the [interfaces.ts](../src/interfaces.ts) file.
+
+# Roadmap
+- Country based decisions;
+- Release based decisions;
+- Flag fetching from remote backends;
+- Type support for flag names for `isEnabled` method;
+- Service level context support
